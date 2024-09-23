@@ -1,5 +1,5 @@
 import { showTrapMessage, showGameOverMessage, showNextLevelButton } from './messages.js';
-import preload from "../scenes/preload.js"
+import preload from '../scenes/preload.js';
 
 const config = {
   width: 1360,
@@ -29,10 +29,13 @@ let scoreText,
   walls,
   goal,
   level = 1;
+let startButton;
+let gameOverText;
 let background;
 let levelText;
 let isImmune = false;  
-let bonusBox;        
+let bonusBox;          
+let immunityTimer; 
 let difficultyWorker;
 const backgrounds = [
   "background",
